@@ -3,6 +3,7 @@ const pricePerDroid = 3000;
 let totalPrice;
 let buyDroids = prompt('Сколько дроидов вы хотите купить?');
 if (buyDroids === null) {
+  buyDroids = Number(null);
   console.log('Отменено пользователем!');
 }
 totalPrice = buyDroids * pricePerDroid;
