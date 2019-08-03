@@ -13,6 +13,7 @@ do {
   }
 }
 while (input !== null);
+numbers.pop(-1);
 for (let i = 0; i < numbers.length; i++)
   total += numbers[i];
 
