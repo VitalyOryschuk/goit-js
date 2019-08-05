@@ -6,15 +6,16 @@ let total = 0;
 do {
   input = prompt('Введите число');
   numbers.push(Number(input));
+
+  if (numbers.length !== 0 && input === null) {
+    for (const number of numbers) {
+      total += number;
+    }
+    console.log(`Общая сумма чисел равна ${total}`);
+  }
   if (Number.isNaN(Number(input))) {
     alert('Было введено не число, попробуйте еще раз');
-    numbers.pop(input);
-    continue;
+    numbers.pop();
   }
-} while (input !== null);
-numbers.pop(-1);
-if (numbers.length !== 0) {
-  for (let i = 0; i < numbers.length; i++) total += numbers[i];
 }
-console.log(numbers);
-console.log(`Общая сумма чисел равна ${total}`);
+while (input !== null);
