@@ -76,3 +76,20 @@ function findFilmWithMaxRating(films) {
   return filmWithMaxRating;
 }
 console.log(findFilmWithMaxRating(films));
+// spred
+const film = {
+  rating: 9.8,
+  title: 'MIB',
+  comments: ['sss', 'bbb'],
+};
+const newFilm = { ...film };
+newFilm.comments[0] = 'hello';
+console.log(film.comments[0]);
+console.log(film, 'old film');
+console.log(newFilm, 'new film');
+
+// rest
+const findMax = (...rest) => {
+  return Math.max(...rest);
+};
+console.log(findMax(5, 10, 13, 200));
