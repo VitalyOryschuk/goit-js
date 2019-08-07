@@ -77,19 +77,35 @@ function findFilmWithMaxRating(films) {
 }
 console.log(findFilmWithMaxRating(films));
 // spred
-const film = {
-  rating: 9.8,
-  title: 'MIB',
-  comments: ['sss', 'bbb'],
-};
-const newFilm = { ...film };
-newFilm.comments[0] = 'hello';
-console.log(film.comments[0]);
-console.log(film, 'old film');
-console.log(newFilm, 'new film');
+// const film = {
+//   rating: 9.8,
+//   title: 'MIB',
+//   comments: ['sss', 'bbb'],
+// };
+// const newFilm = { ...film };
+// newFilm.comments[0] = 'hello';
+// console.log(film.comments[0]);
+// console.log(film, 'old film');
+// console.log(newFilm, 'new film');
 
 // rest
 const findMax = (...rest) => {
   return Math.max(...rest);
 };
 console.log(findMax(5, 10, 13, 200));
+
+const film = {
+  rating: 9.8,
+  title: 'MIB',
+  comments: ['sss', 'bbb'],
+};
+// old
+const rating = film.rating;
+const title = film.title;
+const comments = film.comments;
+// destructurisation
+const { rating: score, title, comments = ['default'] } = film;
+console.log(score, title, comments);
+
+const [firstComments] = comments;
+console.log(firstComments);
