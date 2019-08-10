@@ -23,7 +23,9 @@ const products = [{
 const getAllPropValues = function (arr, prop) {
   let outputArr = [];
   for (let property of arr) {
-    outputArr.push(property[prop])
+    if (property[prop]) {
+      outputArr.push(property[prop])
+    }
   }
   return outputArr;
 }
