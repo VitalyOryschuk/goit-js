@@ -23,8 +23,7 @@ const products = [{
 const calculateTotalPrice = function (arr, productName) {
   for (let property of arr) {
     if (property.name === productName) {
-      let totalPrice = property.price * property.quantity;
-      return totalPrice;
+      return property.price * property.quantity;
     }
   }
 };
