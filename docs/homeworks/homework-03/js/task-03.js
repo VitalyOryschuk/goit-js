@@ -1,9 +1,16 @@
+'use strict'
 const findBestEmployee = function (employees) {
-  // let arr = Object.entries(employees);
-  // Math.max(arr);
-  // return arr;
+  let maxTaskEmployee = 0;
+  const tasks = Object.keys(employees);
 
-  return (...employees);
+  for (let task of tasks) {
+    if (employees[task] > maxTaskEmployee) {
+      maxTaskEmployee = employees[task];
+      name = task;
+    }
+
+  }
+  return name;
 };
 
 console.log(
@@ -15,19 +22,19 @@ console.log(
   }),
 );
 
-// console.log(
-//   findBestEmployee({
-//     poly: 12,
-//     mango: 17,
-//     ajax: 4,
-//   }),
-// );
+console.log(
+  findBestEmployee({
+    poly: 12,
+    mango: 17,
+    ajax: 4,
+  }),
+);
 
-// console.log(
-//   findBestEmployee({
-//     lux: 147,
-//     david: 21,
-//     kiwi: 19,
-//     chelsy: 38,
-//   }),
-// );
+console.log(
+  findBestEmployee({
+    lux: 147,
+    david: 21,
+    kiwi: 19,
+    chelsy: 38,
+  }),
+);
