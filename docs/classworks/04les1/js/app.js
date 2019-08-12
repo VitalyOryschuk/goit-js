@@ -74,3 +74,15 @@ const sumNumber = function(a) {
 let sum = sumNumber(10);
 console.log(sum(5));
 sumNumber(5)(5);
+
+const pop = function() {
+  let arr = [];
+  return function(i) {
+    arr.push(i);
+    console.log(arr);
+  };
+};
+
+const hell = pop();
+hell(500);
+hell('hello');
