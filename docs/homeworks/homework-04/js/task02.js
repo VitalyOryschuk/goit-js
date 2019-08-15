@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 const inventory = {
   items: ['Монорельса', 'Фильтр'],
   add(itemName) {
@@ -9,9 +9,10 @@ const inventory = {
   },
 };
 
-const invokeInventoryOperation = function (itemName, inventoryAction) {
+const invokeInventoryOperation = function(itemName, inventoryAction) {
   console.log(`Invoking ${inventoryAction.name} opeartion on ${itemName}`);
-  inventoryAction(itemName);
+  const arr = inventoryAction.bind(inventory, itemName);
+  arr();
 };
 
 invokeInventoryOperation('Аптечка', inventory.add);
