@@ -1,15 +1,13 @@
 'use strict'
 
-const Account = function (Login, Email) {
-  this.Login = Login;
-  this.Email = Email;
+const Account = function (login, email) {
+  this.login = login;
+  this.email = email;
   this.getInfo = function () {
-    console.log(`Login: ${Login}, Email: ${Email}`);
+    console.log(`Login: ${login}, Email: ${email}`);
   }
 }
-Account.prototype.getInfo = function () {
-
-}
+Account.prototype.getInfo = Account;
 console.log(Account.prototype.getInfo);
 
 const mango = new Account('Mangozedog', 'mango@dog.woof');
