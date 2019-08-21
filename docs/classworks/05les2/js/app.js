@@ -39,11 +39,15 @@ const billy = new SupreAdmin('Billy', 40, 10);
 // billy.say();
 // console.log(billy);
 class Hero {
+  static sum(a, b) {
+    return a + b;
+  }
   constructor(name, color, power) {
     this.name = name;
     this.color = color;
     this._power = power;
   }
+
   great() {
     console.log(`My name is ${this.name}`);
   }
@@ -60,3 +64,20 @@ hulk.power = 'huge';
 console.log(hulk.power);
 console.log(hulk);
 hulk.great();
+// static
+console.log(Hero.sum(5, 18));
+
+class AntiHero extends Hero {
+  constructor({ name, color, power, antipower }) {
+    super(name, color, power);
+    this.antipower = antipower;
+  }
+}
+const tanos = new AntiHero({
+  name: 'Tanos',
+  color: 'blue',
+  power: 'blue',
+  antipower: 'glowes',
+});
+
+console.log(tanos);
