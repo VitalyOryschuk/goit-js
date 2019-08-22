@@ -17,7 +17,6 @@ class StringBuilder {
   }
 }
 
-
 const builder = new StringBuilder('.');
 
 builder.append('^');
