@@ -3,12 +3,12 @@
 const Account = function (login, email) {
   this.login = login;
   this.email = email;
-  this.getInfo = function () {
+
+  Account.prototype.getInfo = function () {
     console.log(`Login: ${login}, Email: ${email}`);
   }
+  console.log(Account.prototype.getInfo);
 }
-Account.prototype.getInfo = Account;
-console.log(Account.prototype.getInfo);
 
 const mango = new Account('Mangozedog', 'mango@dog.woof');
 mango.getInfo(); // Login: Mangozedog, Email: mango@dog.woof
