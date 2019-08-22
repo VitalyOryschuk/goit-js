@@ -7,13 +7,13 @@ class StringBuilder {
     return this._value;
   }
   append(str) {
-    this._value = this.value + str;
+    this._value = `${this.value}${str}`;
   }
   prepend(str) {
-    this._value = str + this._value;
+    this._value = `${str}${this._value}`;
   }
   pad(str) {
-    this._value = str + this._value + str;
+    this._value = `${str}${this._value}${str}`;
   }
 }
 
