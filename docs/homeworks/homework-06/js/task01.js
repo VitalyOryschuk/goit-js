@@ -1,6 +1,5 @@
 'use strict';
-const users = [
-  {
+const users = [{
     id: '701b29c3-b35d-4cf1-a5f6-8b12b29a5081',
     name: 'Moore Hensley',
     email: 'moorehensley@indexia.com',
@@ -85,9 +84,6 @@ const users = [
     age: 39,
   },
 ];
-const getUserNames = users =>
-  users.map(user => {
-    return user.name;
-  });
+const getUserNames = users => users.map(user => user.name);
 
 console.log(getUserNames(users));
