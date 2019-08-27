@@ -1,5 +1,4 @@
-'use strict';
-const users = [{
+export default [{
     id: '701b29c3-b35d-4cf1-a5f6-8b12b29a5081',
     name: 'Moore Hensley',
     email: 'moorehensley@indexia.com',
@@ -84,8 +83,3 @@ const users = [{
     age: 39,
   },
 ];
-
-const getUserWithEmail = (users, email) => users.find(user => user.email === email);
-
-console.log(getUserWithEmail(users, 'shereeanthony@kog.com')); // {объект пользователя Sheree Anthony}
-console.log(getUserWithEmail(users, 'elmahead@omatom.com')); // {объект пользователя Elma Head}
