@@ -8,6 +8,7 @@ console.log(getUserNames(users));
 const getUsersWithEyeColor = (users, color) => users.filter(user => user.eyeColor === color);
 
 console.log(getUsersWithEyeColor(users, 'blue')); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
+// console.table(users);
 // task03======================
 const getUsersWithGender = (users, gender) => users
   .filter(user => user.gender === gender)
@@ -42,8 +43,24 @@ console.log(calculateTotalBalance(users)); // 20916
 // task08=======================
 
 const getUsersWithFriend = (users, friendName) => users
-  .filter(user => user.friends === friendName)
+  .filter(user => user.friends.includes(friendName))
   .map(user => user.name);
 
 console.log(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
 console.log(getUsersWithFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
+
+// task09========================
+
+const getNamesSortedByFriendsCount = users => users
+  .sort((a, b) => a.friends.lenght - b.friends.lenght)
+  .map(user => user.name);
+
+console.log(getNamesSortedByFriendsCount(users));
+// [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
+
+// task10==========================
+
+const getSortedUniqueSkills = users =>
+
+  console.log(getSortedUniqueSkills(users));
+// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
