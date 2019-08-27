@@ -51,8 +51,8 @@ console.log(getUsersWithFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sher
 
 // task09========================
 
-const getNamesSortedByFriendsCount = users => users
-  .sort((a, b) => a.friends.lenght - b.friends.lenght)
+const getNamesSortedByFriendsCount = users => [...users]
+  .sort((a, b) => a.friends.length - b.friends.length)
   .map(user => user.name);
 
 console.log(getNamesSortedByFriendsCount(users));
@@ -60,7 +60,9 @@ console.log(getNamesSortedByFriendsCount(users));
 
 // task10==========================
 
-const getSortedUniqueSkills = users =>
+const getSortedUniqueSkills = users => [...users]
+  .map(user => user.skills)
+  .filter(user => user.skills != user.skills)
 
-  console.log(getSortedUniqueSkills(users));
+console.log(getSortedUniqueSkills(users));
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
