@@ -41,7 +41,9 @@ console.log(calculateTotalBalance(users)); // 20916
 
 // task08=======================
 
-const getUsersWithFriend = (users, friendName) => users.filter(user => user.friends === friendName);
+const getUsersWithFriend = (users, friendName) => users
+  .filter(user => user.friends === friendName)
+  .map(user => user.name);
 
 console.log(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
 console.log(getUsersWithFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
