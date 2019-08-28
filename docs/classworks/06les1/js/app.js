@@ -24,28 +24,35 @@ console.log(
 
 const productList = [
   {
-    id: 1,
-    name: 'Tel',
-    price: 55,
+    id: 0,
+    name: 'Vivo Y17',
+    price: 550,
     inStock: true,
+    imgUrl:
+      'https://www.91-img.com/pictures/133713-v2-vivo-y17-mobile-phone-large-1.jpg',
+  },
+  {
+    id: 1,
+    name: 'Vivo Z25',
+    price: 5500,
+    inStock: true,
+    imgUrl:
+      'https://www.91-img.com/pictures/134236-v3-vivo-z5x-mobile-phone-large-1.jpg',
   },
   {
     id: 2,
-    name: 'Tv',
-    price: 5500,
+    name: 'Apple Xr',
+    price: 555,
     inStock: true,
+    imgUrl:
+      'https://cdn.tmobile.com/content/dam/t-mobile/en-p/cell-phones/apple/apple-iphone-xr/blue/Apple-iPhoneXr-Blue-1-3x.jpg',
   },
   {
     id: 3,
-    name: 'car',
-    price: 55555,
-    inStock: true,
-  },
-  {
-    id: 4,
-    name: 'mouse',
-    price: 100,
+    name: 'Jio',
+    price: 1000,
     inStock: false,
+    imgUrl: 'https://n1.sdlcdn.com/imgs/g/z/o/1-637b9.jpg',
   },
 ];
 const cart = {
@@ -79,6 +86,35 @@ const cart = {
     console.log(this.productList);
   },
 };
-cart.showInfo();
-cart.log();
-cart.setInStockById(8);
+// cart.showInfo();
+// cart.log();
+// cart.setInStockById(8);
+const cartItem = item => {
+  return `<li class="cart__item">
+  <figure class="cart__figure">
+      <img src="${item.imgUrl}" alt="" class="cart__img">
+  </figure>
+  <div class="cart__details">
+      <h2 class="cart__title">${item.name}</h2>
+      <span class="cart__price">Price: ${item.price}</span>
+      <button class="btn" data-id="${item.id}">Delete</button>
+  </div>
+</li>`;
+};
+const cartList = document.querySelector('.cart__list');
+const renderList = () => {
+  cartList.innerHTML = cart.productList
+    .map(item => cartItem(item))
+    .reduce((acc, item) => acc + item, '');
+};
+renderList();
+// console.log(cartList);
+// иннерштмл превращает текст строку в разметку
+
+cartList.addEventListener('click', e => {
+  if (e.target.classList.contains('btn')) {
+    const id = e.target.getAttribute('data-id');
+    cart.removeById(+id);
+    renderList();
+  }
+});
