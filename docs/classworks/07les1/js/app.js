@@ -24,6 +24,7 @@ h1.textContent = 'Awesome title';
 // body.appendChild(h1);
 // куда именно
 body.insertBefore(h1, menuBtn);
+// добавляем список
 const ul = document.createElement('ul');
 const fruits = ['apple', 'kiwi', 'mango'];
 const createLi = (text) => {
@@ -35,3 +36,6 @@ fruits.forEach(item => {
   ul.appendChild(createLi(item));
 })
 body.insertBefore(ul, h1);
+
+const img = '<img onClick="alert(1111)" src="https://cdn.pixabay.com/photo/2015/12/01/20/28/fall-1072821__340.jpg">';
+h1.innerHTML = img;
