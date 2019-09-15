@@ -1,4 +1,5 @@
 'use strict'
+const ul = document.querySelector('#gallery');
 const images = [{
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     alt: 'White and Black Long Fur Cat',
@@ -12,3 +13,19 @@ const images = [{
     alt: 'Group of Horses Running',
   },
 ];
+
+const markup = createLiRow(images);
+ul.insertAdjacentHTML('afterbegin', markup);
+
+function createLiRow(images) {
+  return images.map(image => createRowMarkup(image)).join('');
+}
+
+function createRowMarkup({
+  url,
+  alt
+}) {
+  const row = `
+  <li><img src="${url}" alt="${alt}"></li>`;
+  return row;
+}
