@@ -18,3 +18,29 @@
    max-width: 100%;
    height: auto;
  }
+
+ #counter {
+   padding: 20px;
+ }
+
+ h1 {
+   color: yellowgreen;
+   text-transform: uppercase;
+ }
+
+ #name-output {
+   text-transform: uppercase;
+   color: blueviolet;
+ }
+
+ input {
+   margin: 10px;
+ }
+
+ #validation-input.valid {
+   outline: 3px solid #4caf50;
+ }
+
+ #validation-input.invalid {
+   outline: 3px solid #f44336;
+ }

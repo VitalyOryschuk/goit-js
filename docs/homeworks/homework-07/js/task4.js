@@ -7,7 +7,7 @@ const span = document.querySelector('#value');
 
 const increment = function () {
   counterValue++;
-  span.textContent = counterValue++;
+  span.textContent = counterValue;
 }
 const decrement = function () {
   counterValue--;
