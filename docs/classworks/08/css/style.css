@@ -43,6 +43,7 @@
 
 body {
     height: 500vh;
+    padding-top: 200px;
 }
 
 .navigation-section {
@@ -80,4 +81,12 @@ body {
 .nav_link:hover::before,
 .nav_link.active::before {
     transform: scaleX(1);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
 }

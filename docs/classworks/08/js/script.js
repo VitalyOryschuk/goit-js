@@ -12,6 +12,7 @@ searchInput.addEventListener('input', _.debounce((event) => {
 
 const navLinks = Array.from(document.querySelectorAll('.nav_link'));
 const sections = Array.from(document.querySelectorAll('.navigation-section'));
+let activeLink = navLinks[0];
 
 const addActiveLink = (link) => {
   link.classList.add('active');
@@ -22,6 +23,7 @@ const removeActiveLink = (link) => {
 const setActiveNavLinkByNavData = (navData) => {
   const activeLink = navLinks.find(elem => elem.getAttribute('data-nav') === navData)
   addActiveLink(activeLink);
+  return activeLink;
 }
 const options = {
   rootMargin: '-50px',
@@ -34,7 +36,9 @@ const onEntry = (entries, observer) => {
     if (entry.isIntersecting) {
       // observer.unobserve(zoo)
       const sectionName = entry.target.getAttribute('data-section');
-      console.log(sectionName);
+      removeActiveLink(activeLink);
+      setActiveNavLinkByNavData(sectionName);
+      // console.log(sectionName);
     }
   });
 };
