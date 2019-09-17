@@ -25,7 +25,6 @@ function createRowMarkup({
   url,
   alt
 }) {
-  const row = `
-  <li><img src="${url}" alt="${alt}"></li>`;
-  return row;
+  return `<li><img src="${url}" alt="${alt}"></li>`;
+
 }
