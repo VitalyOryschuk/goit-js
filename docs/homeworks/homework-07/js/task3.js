@@ -26,5 +26,4 @@ function createRowMarkup({
   alt
 }) {
   return `<li><img src="${url}" alt="${alt}"></li>`;
-
-}
+};
