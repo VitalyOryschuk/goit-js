@@ -16,4 +16,3 @@ const createLi = (text) => {
 ingredients.forEach(item => {
   ul.appendChild(createLi(item));
 });
-console.log(ul);
