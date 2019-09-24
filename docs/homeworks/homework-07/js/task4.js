@@ -5,11 +5,11 @@ const buttonDecrement = document.querySelector('button[data-action="decrement"]'
 const buttonIncrement = document.querySelector('button[data-action="increment"]');
 const span = document.querySelector('#value');
 
-const increment = function () {
+const increment = () => {
   counterValue++;
   span.textContent = counterValue;
 }
-const decrement = function () {
+const decrement = () => {
   counterValue--;
   span.textContent = counterValue;
 }
