@@ -13,15 +13,11 @@ const images = [{
     alt: 'Group of Horses Running',
   },
 ];
+ul.insertAdjacentHTML('afterbegin', createLiRow(images));
 
-const markup = createLiRow(images);
-ul.insertAdjacentHTML('afterbegin', markup);
-
-
-function createLiRow() {
-
+function createLiRow(arr) {
+  return arr.reduce((markup, image) => markup + createRowMarkup(image), '');
 }
-
 
 function createRowMarkup({
   url,
@@ -29,4 +25,3 @@ function createRowMarkup({
 }) {
   return `<li><img src="${url}" alt="${alt}"></li>`;
 };
-console.log(createRowMarkup(images));
