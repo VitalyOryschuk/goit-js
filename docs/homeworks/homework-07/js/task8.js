@@ -22,10 +22,10 @@ const createBoxes = amount => {
   const height = 30;
   let step = 10;
   let arr = [];
-  for (let i = 1; i <= amount; i++) {
+  for (let i = 0; i < amount; i++) {
     const divBox = document.createElement('div');
-    divBox.style.width = width + (amount - 1) * step + 'px';
-    divBox.style.height = height + (amount - 1) * step + 'px';
+    divBox.style.width = width + (i * step) + 'px';
+    divBox.style.height = height + (i * step) + 'px';
 
     arr.push(divBox);
     divBoxes.append(divBox);
