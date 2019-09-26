@@ -17,7 +17,10 @@ const images = [{
 const markup = createLiRow(images);
 ul.insertAdjacentHTML('afterbegin', markup);
 
-const createLiRow = (images) => images.reduce((createRowMarkup, image) => createRowMarkup(image) + image, 0);
+
+function createLiRow() {
+
+}
 
 
 function createRowMarkup({
@@ -26,3 +29,4 @@ function createRowMarkup({
 }) {
   return `<li><img src="${url}" alt="${alt}"></li>`;
 };
+console.log(createRowMarkup(images));
