@@ -8,11 +8,11 @@ const ingredients = [
   'Приправы',
 ];
 const ul = document.querySelector('#ingredients');
-const createLi = (text) => {
+const createLi = ingredients.map(item => {
   const li = document.createElement('li');
-  li.textContent = text;
+  li.textContent = item;
+
+  console.log(li);
   return li;
-};
-ingredients.forEach(item => {
-  ul.appendChild(createLi(item));
 });
+ul.append(...createLi);

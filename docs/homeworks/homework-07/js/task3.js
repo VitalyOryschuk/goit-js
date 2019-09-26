@@ -17,9 +17,8 @@ const images = [{
 const markup = createLiRow(images);
 ul.insertAdjacentHTML('afterbegin', markup);
 
-function createLiRow(images) {
-  return images.map(image => createRowMarkup(image)).join('');
-}
+const createLiRow = (images) => images.reduce((createRowMarkup, image) => createRowMarkup(image) + image, 0);
+
 
 function createRowMarkup({
   url,
