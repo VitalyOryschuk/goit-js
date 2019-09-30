@@ -5,16 +5,17 @@ const webpack = require('webpack');
 module.exports = {
   entry: {
     index: './src/js/index.js',
-    one: './src/js/one.js'
+    one: './src/js/one.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].build.js'
+    filename: '[name].build.js',
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.js$/,
@@ -22,13 +23,16 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
-          }
-
-        }
-
-      }
-    ]
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+      {
+        test: /\.hbs$/,
+        exclude: /node_modules/,
+        use: 'handlebars-loader',
+      },
+    ],
   },
   devServer: {
     hot: true,
@@ -36,8 +40,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      chunks: ['index']
+      chunks: ['index'],
     }),
-    new webpack.HotModuleReplacementPlugin()
-  ]
-}
+    new webpack.HotModuleReplacementPlugin(),
+  ],
+};

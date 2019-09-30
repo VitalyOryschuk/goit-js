@@ -12,15 +12,30 @@
 <body>
 
   <div class="container">
-    <h1>Hello webpack</h1>
+    <h1>Hello Webpack</h1>
+    <div class="slider-wrapper"></div>
+    <div class="users"></div>
+    <!-- <div class="slider-wrapper"></div>
     <div class="slider swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">Slide 1</div>
         <div class="swiper-slide">Slide 2</div>
         <div class="swiper-slide">Slide 3</div>
       </div>
-    </div>
+    </div> -->
   </div>
+  <template id="slider-template">
+    <div class="slider swiper-container">
+      <div class="swiper-wrapper">
+        {{#each items}}
+        <div class="swiper-slide">
+          <h2 class="swiper-slide__title">{{ this.title }}</h2>
+          <img class="swiper-slide__img" src="{{ this.src }}" alt="{{ this.title }}">
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </template>
 </body>
 
 </html>
