@@ -1,0 +1,9 @@
+.movie-list {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.movie-item {
+  margin: 2em 0;
+}
