@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+.movie-list {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.movie-item {
+  margin: 2em 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  margin: 0;
+  background: purple;
+  ;
+  padding: 15px 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+.search {
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.search__input {
+  width: 100%;
+  display: inline-block;
+  background: none;
+  font-size: 20px;
+  padding: 10px 15px;
+  color: #ffffff;
+  border: 1px solid #fff;
+}
+
+.search__result {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: #fff;
+  border: 1px solid #fff;
+  background: purple;
+  width: 100%;
+  list-style: none;
+  padding: 0 15px;
+  max-height: 400px;
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+
+.search__result a {
+  text-decoration: none;
+  font-size: 22px;
+  color: inherit;
+  padding: 10px 0;
+  display: inline-block;
+}
+
+.search__result.active {
+  opacity: 1;
+  pointer-events: auto;
+}
