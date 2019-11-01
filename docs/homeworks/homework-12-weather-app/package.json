@@ -19,7 +19,7 @@
   "bugs": {
     "url": ""
   },
-  "homepage": "https://github.com/VitalyOryschuk/goit-js/tree/master/docs/homeworks/homework-12-weather-app/build",
+  "homepage": "https://github.com/VitalyOryschuk/goit-js/tree/master/docs/homeworks",
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
