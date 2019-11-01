@@ -17,7 +17,7 @@
   "author": "Vitaly Orischuk",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/luxplanjay/webpack-starter-kit/issues"
+    "url": ""
   },
   "homepage": "https://github.com/VitalyOryschuk/goit-js/tree/master/docs/homeworks/homework-12-weather-app/build",
   "devDependencies": {
