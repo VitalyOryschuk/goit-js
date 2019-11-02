@@ -4,7 +4,7 @@ export default function getGeoPosition() {
     timeout: 5000,
   };
   return new Promise((resolve, reject) => {
-    navigator.geolocation.getCurrentPosition(
+    window.navigator.geolocation.getCurrentPosition(
       resolve, reject, options);
   })
 };
