@@ -1,4 +1,4 @@
-const BASE_URL = 'https://api.weatherstack.com/current';
+const BASE_URL = 'http://api.weatherstack.com/current';
 const ACCESS_KEY = '9a99e705f4a76202bd804cc156dbd555';
 
 const Refs = {

@@ -1,7 +1,6 @@
 import './styles.css';
 import getGeoPosition from './js/getGeoPosition';
 import fetchWeather from './js/fetchWeather';
-import setPNotifySettings from './js/PNontify';
 
 
 getGeoPosition().then(location => {
@@ -12,5 +11,5 @@ getGeoPosition().then(location => {
 }).then((coords) => {
   fetchWeather(coords.latitude, coords.longitude);
 }).catch(error => {
-  setPNotifySettings();
+  console.log(error);
 });
