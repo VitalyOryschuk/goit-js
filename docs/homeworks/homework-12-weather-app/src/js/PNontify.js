@@ -1,4 +1,4 @@
-import PNotify from 'pnotify/dist/es/PNotify';
+import PNotify from 'node_modules/pnotify/dist/es/PNotify';
 
 export default function setPNotifySettings() {
   PNotify.defaults.styling = 'material';
