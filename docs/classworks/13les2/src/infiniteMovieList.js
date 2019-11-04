@@ -1,4 +1,8 @@
 import apiConfig from './config';
+import {
+  throttle
+} from 'lodash';
+
 export default function () {
   const movieListContainer = document.querySelector('.movie-list');
   const {
@@ -7,10 +11,11 @@ export default function () {
     IMG_SRC
   } = apiConfig;
   let currentPage = 1;
+  let isMovieListLoading = false;
 
   const fetchMovieList = (page = 1) => {
     currentPage = currentPage + 1;
-    return fetch(`${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${page}`)
+    return fetch(`${API_URL}/movie/popular?api_key=${API_KEY}&language=en-US&page=${page}`)
       .then(result => result.json())
   }
 
@@ -21,10 +26,10 @@ export default function () {
     poster_path
   }) => {
     return `<div class="movie-item">
-                  <img src="${IMG_SRC + poster_path}" alt="${title}" class="movie-item__img">
-                  <h2 class="movie-item__title">${title}</h2>
-                  <span class="movie-item__rating">Rating(${vote_count}): ${vote_average}</span>
-              </div>`
+                    <img src="${IMG_SRC + poster_path}" alt="${title}" class="movie-item__img">
+                    <h2 class="movie-item__title">${title}</h2>
+                    <span class="movie-item__rating">Rating(${vote_count}): ${vote_average}</span>
+                </div>`
   }
 
   const createMovieList = (movieList) => {
@@ -38,23 +43,32 @@ export default function () {
   }
 
   const getMovies = (page) => {
+    isMovieListLoading = true;
+
     fetchMovieList(page).then(data => {
         renderMovieList(data.results)
       })
       .catch(error => {
         throw error
+      }).finally(() => {
+        isMovieListLoading = false;
       })
   }
 
-  const addInfinityScroll = () => {
-    window.addEventListener('scroll', () => {
-      const movieListBottom = movieListContainer.getBoundingClientRect().bottom;
-      const windowHeight = window.innerHeight;
+  const onScrollIvent = () => {
+    if (isMovieListLoading) return;
+    const movieListBottom = movieListContainer.getBoundingClientRect().bottom;
+    const windowHeight = window.innerHeight;
 
-      if (movieListBottom / 2 <= windowHeight) {
-        getMovies(currentPage);
-      }
-    })
+    if (movieListBottom / 2 <= windowHeight) {
+      getMovies(currentPage);
+    }
+  }
+
+
+  const addInfinityScroll = () => {
+    window.addEventListener('scroll', throttle(onScrollIvent, 100))
+
   }
 
   getMovies();
