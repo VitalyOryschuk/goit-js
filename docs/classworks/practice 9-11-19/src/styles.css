@@ -1,0 +1,187 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Muli,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+}
+
+.wrapper {
+  padding: 10px;
+  min-height: 100vh;
+  background: rgb(247, 223, 193);
+}
+
+.container {
+  min-width: 1200px;
+  border: 2px solid rgb(107, 66, 12);
+}
+
+.tittle {
+  padding-top: 100px;
+  margin: 0px 0px 40px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: 400;
+  color: rgb(107, 66, 12);
+  font-family: cursive;
+  font-size: 30px;
+}
+
+.text {
+  text-align: center;
+  margin: 0px 0px 130px;
+  padding: 0 300px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgb(107, 66, 12);
+  font-weight: 600;
+}
+
+
+button {
+  background: transparent;
+  margin: 0;
+  padding: 5px 15px 10px;
+  border: 1px solid rgb(107, 66, 12);
+  font-size: 22px;
+  font-family: cursive;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: rgb(107, 66, 12);
+  cursor: pointer;
+}
+
+.line {
+  position: absolute;
+  width: 10px;
+  height: 1.5px;
+  background: rgb(107, 66, 12);
+}
+
+.line1 {
+  left: -10px;
+  top: 20px;
+}
+
+.line2 {
+  left: -10px;
+  top: 0px;
+}
+
+.line3 {
+  left: -10px;
+  top: 41.5px;
+}
+
+.line4 {
+  width: 1.5px;
+  height: 42px;
+  left: -10px;
+  top: 0;
+}
+
+.line5 {
+  left: 274px;
+  top: 20px;
+}
+
+.line6 {
+  left: 274px;
+  top: 0px;
+}
+
+.line7 {
+  left: 274px;
+  top: 41.5px;
+}
+
+.line8 {
+  width: 1.5px;
+  height: 42px;
+  left: 284px;
+  top: 0;
+}
+
+input {
+  padding: 10px;
+  margin: 0 0 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+
+.input-item::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: rgb(107, 66, 12);
+}
+
+input::placeholder {
+  color: rgb(107, 66, 12);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+input[type='text']:valid {
+  outline-color: green;
+}
+
+.form input[type='text']:invalid {
+  outline-color: tomato;
+}
+
+ul {
+  list-style: none;
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto 100px;
+  padding: 0;
+}
+
+li {
+  position: relative;
+  margin-bottom: 30px;
+  width: 280px;
+}
+
+li:nth-last-child(-n + 2) {
+  margin: 0;
+}
+
+.img {
+  background-image: url(../src/images/calendar-icon2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0px;
+  left: 250px;
+  pointer-events: none;
+}
+
+.icon-clock {
+  background-image: url(../src/images/clock.png);
+
+}
+
+.icon-people {
+  background-image: url(../src/images/workers-team.png);
+}
