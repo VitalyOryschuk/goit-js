@@ -38,7 +38,7 @@ function pad(value) {
 
 const timer = new CountdownTimer({
   selector: '#timer-1',
-  targetDate: new Date(2019, 9, 20),
+  targetDate: new Date(2020, 9, 29),
 });
 timer.start();
 /*
