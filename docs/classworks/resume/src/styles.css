@@ -1,0 +1,423 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* *,
+*::before,
+*::after {
+  box-sizing: inherit;
+} */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  background-color: rgb(223, 219, 219);
+}
+
+.container {
+  /* min-height: 100vh; */
+  min-width: 1200px;
+  position: relative;
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(207, 203, 203);
+  box-shadow: 4px 4px 8px gray;
+  position: sticky;
+  top: 0;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.2;
+  color: gray;
+  font-family: 'Titillium Web', sans-serif;
+  transition: color 0.7s;
+}
+
+.menu-link:hover {
+  color: #000;
+}
+
+/* section about me */
+
+#about-me {
+  padding: 100px 0px;
+  background-color: rgb(184, 213, 224);
+}
+
+.title {
+  margin: 0px 0px 100px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 28px;
+  line-height: 1.6;
+  font-family: 'Tomorrow', sans-serif;
+  text-shadow: 2px 2px 2px gray;
+}
+
+.white {
+  color: #fff;
+}
+
+.description {
+  display: flex;
+  justify-content: space-around;
+}
+
+.photo {
+  padding: 10px;
+  border-radius: 3%;
+  background-color: #fff;
+  /* transition: translate 0.5s; */
+}
+
+/* .photo:hover {
+  translate: rotateY(90deg);
+} */
+
+.img-photo {
+  border-radius: 3%;
+}
+
+.name {
+  /* background-color: #fff;
+  border-radius: 25%; */
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.occupation {
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.about-me-title {
+  margin: 0;
+  padding: 0;
+  font-family: 'Exo', sans-serif;
+}
+
+.education-title::before {
+  display: inline-block;
+  content: '';
+  width: 25px;
+  height: 25px;
+  background-image: url(../src/images/college-graduation.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 30px;
+  vertical-align: top;
+}
+
+.languages-title::before {
+  display: inline-block;
+  content: '';
+  width: 25px;
+  height: 25px;
+  background-image: url(../src/images/language.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 30px;
+  vertical-align: top;
+}
+
+/* skills */
+#skills {
+  padding: 100px 0px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0px auto;
+  height: 100px;
+}
+
+.skills-list-item {
+  width: 12.5%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+
+.skill {
+  margin: 0;
+  color: gray;
+  font-weight: 600;
+  line-height: 1.4;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.icon::before {
+  display: block;
+  content: '';
+  text-align: center;
+  width: 25px;
+  height: 25px;
+}
+
+.html {
+  background-image: url(../src/images/html5.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.css {
+  background-image: url(../src/images/css-3.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.scss {
+  background-image: url(../src/images/sass.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bem {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../src/images/bem.png);
+}
+
+.git {
+  background-image: url(../src/images/git.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gulp {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../src/images/gulp.png);
+}
+
+.webpack {
+  background-image: url(../src/images/wordpress.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.es6 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../src/images/es6.png);
+}
+
+.js {
+  background-image: url(../src/images/js.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bootstrap {
+  background-image: url(../src/images/bootstrap.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.photoshop {
+  background-image: url(../src/images/photoshop.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.api {
+  background-image: url(../src/images/api.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.json {
+  background-image: url(../src/images/json-file.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.react {
+  background-image: url(../src/images/react.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.oop {
+  background-image: url(../src/images/oop.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.npm {
+  background-image: url(../src/images/npmlogo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* works */
+
+#works {
+  background-color: #000;
+  padding: 100px 0;
+}
+
+.works-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.works-list-item {
+  width: 33.333%;
+  padding: 20px;
+  text-align: center;
+}
+
+.works-img:hover {
+  transform: scale(1.1);
+}
+
+.works-img {
+  border-radius: 5%;
+  box-shadow: 4px 4px 8px gray;
+  transition: transform 0.7s;
+}
+
+/* contact */
+/* .social-link {
+  width: 40px;
+  height: 40px;
+  background-image: url(../src/images/facebook.png);
+}
+
+.facebook {
+  background-image: url(../src/images/facebook.png);
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+#contact {
+  padding-top: 100px;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  padding: 0;
+  margin: 0px auto 50px;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0px auto 50px;
+}
+
+.contact-text {
+  font-family: 'Tomorrow', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: gray;
+  margin: 0;
+}
+
+.adress {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  padding-left: 10px;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.span {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-family: 'Tomorrow', sans-serif;
+}
+
+.span::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  margin-bottom: 20px;
+}
+
+.return {
+  position: fixed;
+  top: 90%;
+  left: 95%;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(129, 128, 128);
+  border-radius: 50%;
+  box-shadow: 6px 6px 10px #000;
+  transition: background 0.7s, border-radius 0.7s;
+}
+
+.return:hover {
+  border-radius: 15%;
+}

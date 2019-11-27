@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Tomorrow';
+  font-weight: 400;
+  font-style: normal;
+  src: url(../src/fonts/tomorrow-v2-latin-regular.woff) format('woff'),
+    url(../src/fonts/tomorrow-v2-latin-regular.woff2) format('woof2');
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../src/fonts/titillium-web-v8-latin-regular.woff) format('woff'),
+    url(../src/fonts/titillium-web-v8-latin-regular.woff2) format('woof2');
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 600;
+  src: url(../src/fonts/titillium-web-v8-latin-600.woff) format('woff'),
+    url(../src/fonts/titillium-web-v8-latin-600.woff2) format('woof2');
+}
+
+@font-face {
+  font-family: 'Exo';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../src/fonts/exo-v9-latin-regular.woff) format('woff'),
+    url(../src/fonts/exo-v9-latin-regular.woff2) format('woof2');
+}
