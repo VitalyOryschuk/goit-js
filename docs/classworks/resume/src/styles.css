@@ -169,7 +169,6 @@ body {
 .skills-list-item {
   width: 12.5%;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
 }
