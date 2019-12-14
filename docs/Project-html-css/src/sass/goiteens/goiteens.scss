@@ -1,0 +1,145 @@
+.goiteens {
+    padding: 30px 0;
+    @media (min-width: 768px) {
+        padding: 30px 35px;
+    }
+  &__title {
+    margin-bottom: 0.5em;
+    @extend %title;
+    @media (min-width: 768px) {
+      @include lh (33, 33);
+    }
+    &--span {
+      display: flex;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: $icon-first-color;
+      justify-content: center;
+      align-items: center;
+      margin-right: 15px;
+    }
+    &--svg {
+      width: 1rem;
+      height: 1rem;
+      fill: $primary-white-color;
+    }
+  }
+  &__list{
+    @extend %list;
+      &--li{
+        border-radius: 6px;
+        @media (min-width: 768px) {
+          &:nth-child(4n+1){
+              border-right: 1px dashed $border-color;
+              border-bottom: 1px dashed $border-color;
+          }
+          &:nth-child(4n+4){
+              border-left: 1px dashed $border-color;
+              border-top: 1px dashed $border-color;
+          }
+      }
+      @media (min-width: 1200px) {
+          &:nth-child(4n+1){
+              border: none;
+          }
+          &:nth-child(4n+4){
+              border: none;
+          }
+          &:not(:last-child) {
+              border-right: 1px dashed $border-color;
+          } 
+      }
+      }
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+  }
+  &__link{
+    outline: none;
+    color: $primary-headline-color;
+    @extend %link;
+  }
+  &__item {
+    margin-top: 20px;
+    background: $bg-section-color;
+    border-radius: 6px;
+    width: 280px;
+    padding: 24px 44px;
+    transition: background 1s;
+    @media (min-width: 768px) {
+        margin-top: 0;
+        width: 308px;
+        padding: 50px 44px;
+    }
+    @media (min-width: 1200px) {
+        margin-top: 0;
+        width: 258px;
+        padding: 50px 20px;          
+    }
+    cursor: pointer;
+    &:hover {
+        background: $primary-accent-color;
+    }
+    &:hover &--paragraph,
+    &:hover &--year,
+    &:hover &--arrow{
+        color: $primary-white-color;
+        fill: $primary-white-color;
+    }
+    .goiteens__link:focus & {
+        background: $primary-accent-color;
+    }
+    .goiteens__link:focus &--paragraph,
+    .goiteens__link:focus &--year,
+    .goiteens__link:focus &--arrow{
+        color: $primary-white-color;
+        fill: $primary-white-color;
+    }
+    &--title {
+      @include lh(25, 25);
+      font-family: "Ubuntu Bold", sans-serif;
+      @media (min-width: 768px) {
+        @include lh(30, 30);
+      }
+    }
+    &--paragraph {
+      @include lh(16, 20);
+      color: $primary-text-color;
+      transition: color 1s;
+      padding: 30px 0;
+      font-family: "Ubuntu Regular", sans-serif;
+      @media (min-width: 1200px) {
+        @include lh(18, 26);
+      }
+    }
+    &--year {
+      display: inline-block;
+      position: relative;
+      padding: 14px 0;
+      @include lh(30, 22);
+      color: $primary-accent-color;
+      font-family: "Open Sans Bold", sans-serif;
+      font-weight: 700;
+      transition: color 1s;
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        content: "років";
+        display: block;
+        @include lh(13, 13);
+        font-family: "Ubuntu Regular", sans-serif;
+        text-decoration-line: underline;
+      }
+    }
+    &--arrow {
+      width: 20px;
+      height: 16px;
+      fill: $primary-accent-color;
+      transition: fill 1s;
+    }
+  }
+}

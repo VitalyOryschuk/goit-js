@@ -1,0 +1,71 @@
+.welcome-section {
+    position: relative;
+    padding-top: 16px;
+    padding-bottom: 52px;
+    background-image: url(../images/welcome-banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(../images/welcome-banner@2x.png);
+    }
+    
+    @media (min-width: 768px) {
+        padding-top: 28px;
+        padding-bottom: 38px;
+    }
+    
+    @media (min-width: 1200px) {
+        padding-bottom: 98px;
+    }
+
+    &__headline {
+        margin: 0;
+        @include lh(35, 60);
+        font-family: "Open Sans Extra", sans-serif;
+        font-weight: 900;
+        text-align: center;
+        color: $primary-white-color;
+        margin-bottom: 12px;
+
+        @media (min-width: 768px) {
+            @include lh(45, 60);
+            margin-bottom: 24px;
+        }
+
+        @media (min-width: 1200px) {
+            @include lh(65, 65);
+            text-align: left;
+        }
+    }
+
+    &__text {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68));
+        margin-bottom: 62px;
+        padding: 8px 16px;
+        font-family: "Ubuntu Regular", sans-serif;
+        font-weight: 400;
+        @include lh(16, 22);
+        color: $primary-white-color;
+
+        @media (min-width: 768px) {
+            width: 446px;
+            margin: 0 auto;
+            margin-bottom: 26px;
+            @include lh(27, 32);
+        }
+
+        @media (min-width: 1200px) {
+            width: 490px;
+            margin: 0;
+            @include lh(25, 35);
+        }
+
+        &--accent {
+            font-family: "Ubuntu Bold", sans-serif;
+            font-weight: 700;
+            color: $primary-accent-color; 
+        }
+    }
+}

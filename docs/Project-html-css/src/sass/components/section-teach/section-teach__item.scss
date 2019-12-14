@@ -1,0 +1,57 @@
+.section-teach__item { 
+  width: 260px;
+  margin-bottom: 30px;
+  padding-left: 45px;
+
+  &::before { 
+    content: '';
+    display: block;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%; 
+    margin-bottom: 13px;
+    background-size: 35px 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:last-child { 
+    margin: 0;
+  }
+}
+
+.section-teach__item--planet::before { 
+  background-color: $bg-item-first-color;
+  background-image: url(../images/icon-planet.svg);
+}
+
+.section-teach__item--hands::before { 
+  background-color: $bg-item-second-color;
+  background-image: url(../images/icon-hands.svg);
+}
+
+.section-teach__item--surface::before { 
+  background-color: $bg-item-third-color;
+  background-image: url(../images/icon-surface.svg);
+}
+
+.section-teach__item--money::before { 
+  background-color: $bg-item-fourth-color;
+  background-image: url(../images/icon-money.svg);
+}
+
+.section-teach__item--idea::before { 
+  background-color: $bg-item-third-color;
+  background-image: url(../images/icon-idea.svg);
+}
+
+.section-teach__item--file::before { 
+  background-color: $bg-item-second-color;
+  background-image: url(../images/icon-file.svg);
+}
+
+.section-teach__item--target::before { 
+  background-color: $bg-item-first-color;
+  background-image: url(../images/icon-target.svg);
+}
+

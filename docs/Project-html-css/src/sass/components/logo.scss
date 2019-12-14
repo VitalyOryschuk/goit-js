@@ -1,0 +1,18 @@
+.logo {
+    display: block;
+
+    &:focus {
+        outline: 2px solid $primary-hover-color;
+    }
+}
+
+.logo__img {
+    display: block;
+    width: 100px;
+    height: 26px;
+
+    @media (min-width: 768px) {
+        width: 142px;
+        height: 38px;
+    }
+}

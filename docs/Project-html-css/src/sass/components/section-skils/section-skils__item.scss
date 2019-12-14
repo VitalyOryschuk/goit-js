@@ -1,0 +1,26 @@
+.section-skils__item { 
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%; 
+  margin-bottom: 15px;
+  padding: 18px;
+
+  &:last-child { 
+    margin: 0;
+  }
+}
+
+.section-skils__item--orange { 
+  background-color: $bg-item-first-color;
+}
+
+.section-skils__item--pink { 
+  background-color: $bg-item-second-color; 
+}
+
+.section-skils__item--purle { 
+  background-color: $bg-item-third-color;
+}
+
+.section-skils__item--green { 
+  background-color: $bg-item-fourth-color;
+}

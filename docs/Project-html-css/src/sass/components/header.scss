@@ -1,0 +1,11 @@
+.header {
+    margin-bottom: 274px;
+
+    @media (min-width: 768px) {
+        margin-bottom: 324px;
+    }
+
+    @media (min-width: 1200px) {
+        margin-bottom: 400px;
+    }
+}

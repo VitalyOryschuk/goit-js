@@ -1,0 +1,42 @@
+/*
+   Import partials below
+*/
+@import './normalize';
+@import './base';
+@import './container';
+@import './helpers/fonts';
+@import './helpers/variables';
+@import './helpers/placeholders';
+@import './helpers/mixins';
+@import './components/logo';
+@import './components/button';
+@import './components/header';
+@import './components/nav';
+@import './components/overlay';
+@import './components/btn-scroll-down';
+@import './components/welcome-section';
+
+// YEvhen_SHmatko
+@import './about/about';
+@import './goiteens/goiteens';
+
+// Vitaly
+
+// section-teach
+@import './components/section-teach/section-teach';
+@import './components/section-teach/section-teach__title';
+@import './components/section-teach/section-teach__list';
+@import './components/section-teach/section-teach__text';
+@import './components/section-teach/section-teach__item';
+@import './components/section-teach/section-teach__title-span';
+// section-skils
+@import './components/section-skils/section-skils__title';
+@import './components/section-skils/section-skils__list';
+@import './components/section-skils/section-skils__item';
+@import './components/section-skils/section-skils__dashed';
+@import './components/section-skils/section-skils__subtitle';
+@import './components/section-skils/section-skils__text';
+@import './components/section-skils/section-skils';
+
+@import './helpers/media';
+@import './components/footer.scss';

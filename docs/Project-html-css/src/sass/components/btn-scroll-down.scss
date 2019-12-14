@@ -1,0 +1,25 @@
+.btn-scroll-down {
+    display: block;
+    width: 16px;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    @media (min-width: 1200px) {
+        display: none;
+    }
+
+    &:focus,
+    &:hover {
+        outline: 2px solid $primary-hover-color;
+    }
+    
+    &__img {
+        width: 16px;
+        height: 9px;
+        fill: #000;
+    }
+}
+

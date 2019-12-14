@@ -1,0 +1,129 @@
+.about{
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    @media (min-width: 768px) {
+        padding: 30px 35px;
+    }
+    @media (min-width: 1200px) {
+        padding: 110px 35px 30px;
+    }
+    &--maxw{
+        @media (min-width: 768px) {
+            width: 620;
+        }
+        @media (min-width: 1200px) {
+            width: 1040px;
+        }
+    }
+    &__wrp{
+        @media (min-width: 1200px) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    
+    &__text{
+        @media (min-width: 1200px) {
+            width: 530px;
+            order: 20;
+        }
+        &--quote{
+        width: 29px;
+        height: 24px;
+        @media (min-width: 768px) {
+            transform: translateX(-34px)
+        }
+        }
+        &--paragrahp{
+            font-family: "Ubuntu Regular", sans-serif;
+            font-weight: 400;
+            color: $primary-text-color;
+            @include lh (14, 20);
+            margin-bottom: 20px;
+            
+            @media (min-width: 768px) {
+                @include lh (18, 25);
+            }
+            @media (min-width: 1200px) {
+                @include lh (20, 35);
+            }
+        }
+
+    }
+    &__img{
+        width: 100%;
+        height: 320px;
+        box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        border-radius: 6px;
+        background-image: url(../images/about/img.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        /* background-attachment: fixed; */
+        background-size: cover;
+        z-index: 2;
+        @media (-webkit-min-device-pixel-ratio: 2) {
+            &{ background-image: url(../images/about/img@2x.png); }
+        }
+        @media (min-width: 1200px) {
+            width: 400px;
+            height: 250px;
+            order: 10;
+        }
+    }
+    &__qoal{
+        display: flex;
+        margin-top: 40px;
+        padding: 30px 40px;
+        background: $primary-qoal-bg;
+        border-radius: 6px;
+        @media (min-width: 768px) {
+            padding: 40px 60px;
+        }
+        @media (min-width: 1200px) {
+            padding: 70px 100px;
+            order: 30;
+        }
+        &--text{
+            font-family: "Ubuntu Regular", sans-serif;
+            position: relative;
+            color: $primary-qoal-color;
+            @include lh (18, 24);
+            padding-top: 10px;
+            text-align: center;
+            @media (min-width: 768px) {
+                @include lh (20, 28); 
+            }
+            @media (min-width: 1200px) {
+                @include lh (25, 35); 
+            }
+            &:before{
+                content: '';
+                position: absolute;
+                display: block;
+                width: 60px;
+                height: 2px;
+                background: $primary-qoal-before;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%, 0);
+                @media (min-width: 768px) {
+                    padding-top: 0;
+                    width: 2px;
+                    height: 84px;
+                    left: 0;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                }
+            }
+            @media (min-width: 768px) {
+                padding-top: 0;
+                padding-left: 25px;
+                text-align: start;
+            }
+        }
+    }
+    
+}

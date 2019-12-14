@@ -1,0 +1,59 @@
+.nav {
+    @extend %dfsb;
+}
+
+.nav__list {
+    display: none;
+    @extend %list;
+
+    @media (min-width: 1200px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-basis: 842px;
+    }
+}
+
+.nav__link {
+    position: relative;
+    font-family: "Ubuntu Bold", sans-serif;
+    font-weight: 700;
+    @include lh(15, 60);
+    @extend %link;
+    color: $primary-white-color;
+
+    &::after {
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        content: '';
+        display: block;
+        width: 0%;
+        height: 2px;
+        background-color: $primary-hover-color;
+    }
+
+    &:hover::after,
+    &:focus::after {
+        width: 100%;
+        left: 0;
+    }
+}
+
+.nav__button {
+    border: none;
+    background: transparent;
+    display: block;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+
+    @media (min-width: 1200px) {
+        display: none;
+    }
+
+    &:focus,
+    &:hover {
+        outline: 2px solid $primary-hover-color;
+    }
+}
